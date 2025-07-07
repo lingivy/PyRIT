@@ -1,39 +1,41 @@
-<p align="center"><img src="./doc/roakey.png" width="150"></p>
+# Crescendo
 
-# Python Risk Identification Tool for generative AI (PyRIT)
 
-The Python Risk Identification Tool for generative AI (PyRIT) is an open source
-framework built to empower security professionals and engineers to proactively
-identify risks in generative AI systems.
+## 🚀 快速开始
 
-- Check out our [website](https://azure.github.io/PyRIT/) for more information
-  about how to use, install, or contribute to PyRIT.
-- Visit our [Discord server](https://discord.gg/9fMpq3tc8u) to chat with the team and community.
+### 1\. 环境配置
 
-## Trademarks
+使用 `environment.yml` 文件来创建并激活 Conda 环境。
 
-This project may contain trademarks or logos for projects, products, or services.
-Authorized use of Microsoft trademarks or logos is subject to and must follow
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must
-not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's
-policies.
-
-## Citing PyRIT
-
-If you use PyRIT in your research, please cite our preprint paper as follows:
-
-```
-@misc{munoz2024pyritframeworksecurityrisk,
-      title={PyRIT: A Framework for Security Risk Identification and Red Teaming in Generative AI Systems},
-      author={Gary D. Lopez Munoz and Amanda J. Minnich and Roman Lutz and Richard Lundeen and Raja Sekhar Rao Dheekonda and Nina Chikanov and Bolor-Erdene Jagdagdorj and Martin Pouliot and Shiven Chawla and Whitney Maxwell and Blake Bullwinkel and Katherine Pratt and Joris de Gruyter and Charlotte Siska and Pete Bryan and Tori Westerhoff and Chang Kawaguchi and Christian Seifert and Ram Shankar Siva Kumar and Yonatan Zunger},
-      year={2024},
-      eprint={2410.02828},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2410.02828},
-}
+```bash
+conda env create -f environment.yml
+conda activate [your_env_name]
 ```
 
-Additionally, please cite the tool itself following the `CITATION.cff` file in the root of this repository.
+### 2\. 配置 API KEY
+
+复制 `.env_example` 文件为 `.env`，然后修改文件内容以配置你的 API KEY。
+
+```bash
+# 复制文件
+cp .env_example .env
+```
+
+接着，编辑新创建的 `.env` 文件：
+
+```dotenv
+# .env
+KEY="PASTE_YOUR_API_KEY_HERE"
+```
+
+### 3\. 运行程序
+
+执行主程序脚本 `crescendo_attack.py`。
+
+```bash
+python crescendo_attack.py
+```
+
+### 4\. 查看日志
+
+程序运行后，相关的输出日志会自动保存在项目根目录下的 `log/` 文件夹中。
